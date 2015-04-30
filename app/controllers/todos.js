@@ -18,7 +18,7 @@ export default Ember.ArrayController.extend({
       todo.save();
     },
     clearCompleted: function clearCompleted() {
-      let completed = this.fliterBy('isCompleted', true);
+      let completed = this.filterBy('isCompleted', true);
       completed.invoke('deleteRecord');
       completed.invoke('save');
     }
