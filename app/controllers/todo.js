@@ -24,7 +24,7 @@ export default Ember.Controller.extend({
   },
   isCompleted: function isCompleted(key, value) {
     let model = this.get('model');
-    console.log(key, value, 'hello');
+
     if (value === undefined) {
       return model.get('isCompleted');
     } else {

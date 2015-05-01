@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
   actions: {
-    createTodo: function createTodo() {
+    createTodo() {
       let title = this.get('newTitle');
 
       if (!title.trim()) {
@@ -17,7 +17,7 @@ export default Ember.ArrayController.extend({
       this.set('newTitle', '');
       todo.save();
     },
-    clearCompleted: function clearCompleted() {
+    clearCompleted() {
       let completed = this.filterBy('isCompleted', true);
       completed.invoke('deleteRecord');
       completed.invoke('save');

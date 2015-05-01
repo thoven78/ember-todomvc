@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model: function model() {
+  model() {
     return this.store.filter('todo', (todo) => todo.get('isCompleted'));
   },
-  renderTemplate: function renderTemplate(controller) {
+  renderTemplate(controller) {
     this.render('todos/completed', {
       controller: controller
     });

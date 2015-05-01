@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model: function model() {
+  model() {
     return this.modelFor('todos');
   }
 });
